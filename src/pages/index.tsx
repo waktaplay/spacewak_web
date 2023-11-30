@@ -5,6 +5,7 @@ import StickyBar from '@/components/sticky-bar'
 import Image from 'next/image'
 import { Footer } from '@/components/footer'
 import { grayScale } from '@/styles/colors'
+import { Groups } from '@/components/groups'
 
 export default function Home() {
   return (
@@ -29,7 +30,7 @@ export default function Home() {
           </div>
         </section>
         <section css={groupCss}>
-          <div>팀 아이콘</div>
+          <Groups />
         </section>
         <Footer />
         <StickyBar />
@@ -50,8 +51,11 @@ const mainCss = css({
 
 const groupCss = css({
   width: '100vw',
-  height: '100vh',
   backgroundColor: grayScale[800],
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'center',
+  alignItems: 'center',
 })
 
 const titleCss = css({
