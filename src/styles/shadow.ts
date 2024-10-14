@@ -1,5 +1,5 @@
 export const SHADOW = {
-  lagre: `
+  large: `
     box-shadow: 0px 12px 90px 0px rgba(0, 0, 0, 0.30);
     backdrop-filter: blur(75px);
   `,
