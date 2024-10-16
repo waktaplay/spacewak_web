@@ -1,5 +1,6 @@
 import { Metadata, Viewport } from 'next'
 import { ReactNode } from 'react'
+import "@/styles/globals.css";
 
 export const metadata: Metadata = {
   title: 'SpaceWak',
