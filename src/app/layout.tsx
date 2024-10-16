@@ -1,6 +1,7 @@
+import { Metadata, Viewport } from 'next'
 import { ReactNode } from 'react'
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'SpaceWak',
   description: '',
   // metadataBase: new URL('/'),
@@ -11,16 +12,15 @@ export const metadata = {
     type: 'website',
     title: '',
     description: '',
-    image: '',
+    images: '',
     url: '',
   },
-  twitter: {
-    card: '',
-    title: '',
-    description: '',
-    images: '',
-  },
   verification: {},
+}
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
 }
 
 export default function RootLayout({ children }: { children: ReactNode }) {
