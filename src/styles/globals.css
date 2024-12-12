@@ -87,6 +87,7 @@ video {
   margin: 0;
   padding: 0;
   border: 0;
+  font-family: 'Pretendard';
 }
 /* HTML5 display-role reset for older browsers */
 article,
@@ -117,7 +118,7 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: "";
+  content: '';
   content: none;
 }
 table {
