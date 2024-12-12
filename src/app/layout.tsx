@@ -1,6 +1,6 @@
-import { Metadata, Viewport } from 'next'
 import { ReactNode } from 'react'
-import "@/styles/globals.css";
+import { Metadata, Viewport } from 'next'
+import '@/styles/globals.css'
 import StyledComponentsRegistry from '@/lib/registry'
 
 export const metadata: Metadata = {
@@ -28,7 +28,6 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="ko">
-      <body>{children}</body>
       <body>
         <StyledComponentsRegistry>
             {children}
