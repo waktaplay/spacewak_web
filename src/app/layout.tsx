@@ -1,6 +1,7 @@
-import { Metadata, Viewport } from 'next'
-import { ReactNode } from 'react'
-import "@/styles/globals.css";
+import { Metadata, Viewport } from 'next';
+import { ReactNode } from 'react';
+import '@/styles/globals.css';
+import StyledComponentsRegistry from '@/lib/registry';
 
 export const metadata: Metadata = {
   title: 'SpaceWak',
@@ -17,17 +18,19 @@ export const metadata: Metadata = {
     url: '',
   },
   verification: {},
-}
+};
 
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
-}
+};
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="ko">
-      <body>{children}</body>
+      <body>
+        <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+      </body>
     </html>
-  )
+  );
 }
