@@ -1,5 +1,5 @@
-import { ReactNode } from 'react'
 import { Metadata, Viewport } from 'next'
+import { ReactNode } from 'react'
 import '@/styles/globals.css'
 import StyledComponentsRegistry from '@/lib/registry'
 
@@ -29,9 +29,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="ko">
       <body>
-        <StyledComponentsRegistry>
-            {children}
-        </StyledComponentsRegistry>
+        <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
       </body>
     </html>
   )
