@@ -12,8 +12,8 @@ importers:
         specifier: ^8.1.0
         version: 8.1.0(typescript@5.5.4)
       '@waktaplay/ui':
-        specifier: ^1.0.2
-        version: 1.0.2
+        specifier: ^1.0.5
+        version: 1.0.5
       next:
         specifier: 14.2.8
         version: 14.2.8(@babel/core@7.26.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -778,8 +778,8 @@ packages:
   '@types/stylis@4.2.5':
     resolution: {integrity: sha512-1Xve+NMN7FWjY14vLoY5tL3BVEQ/n42YLwaqJIPYhotZ9uBHt87VceMwWQpzmdEt2TNXIorIFG+YeCUUW7RInw==}
 
-  '@waktaplay/ui@1.0.2':
-    resolution: {integrity: sha512-4xl4CYpEKG8bId1nnRGpdPSx4+i08dgjwfbPNyAF8QGMfpAumECDDk7dR2Om7EiFDh3ll0eW9sGwTM+If827wA==, tarball: https://npm.pkg.github.com/download/@waktaplay/ui/1.0.2/6351a551ced7a20ffed13e9fcad41c2771a6cf8a}
+  '@waktaplay/ui@1.0.5':
+    resolution: {integrity: sha512-niRRMK4VptUJAjIMCzz09Jc6DClbmL7OanDlmAwrci28mMaUA9f46wWf7VcrvNu4Fa6h3RVJUBFV3XrlrDXkQg==, tarball: https://npm.pkg.github.com/download/@waktaplay/ui/1.0.5/cbd51b519e485eb13a7d3036f8f2fde78b71d011}
 
   argparse@2.0.1:
     resolution: {integrity: sha512-8+9WqebbFzpX9OR+Wa6O29asIogeRMzcGtAINdpMHHyAg10f05aSFVBbcEqGf/PXw1EjAZ+q2/bEBg3DvurK3Q==}
@@ -2099,7 +2099,7 @@ snapshots:
 
   '@types/stylis@4.2.5': {}
 
-  '@waktaplay/ui@1.0.2':
+  '@waktaplay/ui@1.0.5':
     dependencies:
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
