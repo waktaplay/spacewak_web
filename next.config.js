@@ -6,6 +6,8 @@ const nextConfig = {
     styledComponents: true,
   },
 
+  images: { domains: ['cdn.spacewak.net'] },
+
   webpack: (config) => {
     const fileLoaderRule = config.module.rules.find((rule) =>
       rule.test?.test?.('.svg')
