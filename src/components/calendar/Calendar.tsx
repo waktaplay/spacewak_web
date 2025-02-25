@@ -6,6 +6,7 @@ import CalendarItem from "./CalendarItem";
 import CalendarHeader from "./CalendarHeader";
 import { grayScale } from "@/styles/colors";
 import DayRow from "./DayRow";
+import Drawer from "./drawer/Drawer";
 
 const Container = styled.div`
   width: 100%;
@@ -34,11 +35,6 @@ const Header = styled.div`
 const ContentFlex = styled.div`
   display: flex;
   flex: 1;
-`;
-
-const Drawer = styled.div`
-  width: 240px;
-  border-right: 1px solid ${grayScale[600]};
 `;
 
 const CalendarContainer = styled.div`
