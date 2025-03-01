@@ -1,17 +1,63 @@
 import { grayScale } from "@/styles/colors";
+import { TYPOGRAPHY } from "@/styles/typography";
+import Image from "next/image";
 import styled from "styled-components";
 
 const Header = styled.div`
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 16px;
+  padding: 12px 14px;
   border-bottom: 1px solid ${grayScale[600]};
 `;
 
 const YearAndMonth = styled.p`
-  width: 120px;
+  ${TYPOGRAPHY.subHeading1}
+  margin-right: 8px;
+  width: 140px;
+  height: 24px;
   color: ${grayScale[50]};
+`;
+
+const IconBtn = styled.button`
+  margin: 0;
+  padding: 0;
+  width: 36px;
+  height: 36px;
+  background: transparent;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  transition: 0.1s ease-in-out;
+  cursor: pointer;
+
+  &:active {
+    background: ${grayScale[800]};
+  }
+`;
+
+const TodayBtn = styled.button`
+  margin-left: 14px;
+  height: 36px;
+  padding: 0 16px;
+  background: ${grayScale[700]};
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  transition: 0.1s ease-in-out;
+  cursor: pointer;
+  color: ${grayScale[100]};
+  ${TYPOGRAPHY.bodyNormal2};
+
+  &:active {
+    background: ${grayScale[600]};
+  }
+`;
+
+const HelpIcon = styled.div`
+  margin-left: auto;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
 `;
 
 type Props = {
@@ -35,16 +81,35 @@ export default function CalendarHeader({
         {year}년 {month}월
       </YearAndMonth>
 
-      <button type="button" onClick={onPrev}>
-        이전
-      </button>
-      <button type="button" onClick={onNext}>
-        다음
-      </button>
+      <IconBtn type="button" onClick={onPrev}>
+        <Image
+          alt="chevron left"
+          src="/static/images/icon/ic_chevron_left.svg"
+          width={36}
+          height={36}
+        />
+      </IconBtn>
+      <IconBtn type="button" onClick={onNext}>
+        <Image
+          alt="chevron left"
+          src="/static/images/icon/ic_chevron_right.svg"
+          width={36}
+          height={36}
+        />
+      </IconBtn>
 
-      <button type="button" onClick={onClickCurrent}>
+      <TodayBtn type="button" onClick={onClickCurrent}>
         오늘
-      </button>
+      </TodayBtn>
+
+      <HelpIcon>
+        <Image
+          alt="help"
+          src="/static/images/icon/ic_help.svg"
+          width={20}
+          height={20}
+        />
+      </HelpIcon>
     </Header>
   );
 }

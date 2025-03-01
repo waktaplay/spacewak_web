@@ -1,7 +1,9 @@
 import { grayScale, primary } from "@/styles/colors";
+import { TYPOGRAPHY } from "@/styles/typography";
 import styled from "styled-components";
 
 const Item = styled.div<{ $gridColumnStart: number }>`
+  padding: 9px;
   border: none;
   text-align: left;
   grid-column-start: ${(props) => props.$gridColumnStart};
@@ -9,8 +11,10 @@ const Item = styled.div<{ $gridColumnStart: number }>`
 `;
 
 const DateText = styled.p<{ $isSunday: boolean; $isCurrentMonth: boolean }>`
-  margin: 0;
-  padding: 8px;
+  ${TYPOGRAPHY.label1}
+  margin: 0 0 12px 0;
+  padding: 0 3px;
+  user-select: none;
   color: ${(props) =>
     props.$isCurrentMonth
       ? props.$isSunday
@@ -19,6 +23,7 @@ const DateText = styled.p<{ $isSunday: boolean; $isCurrentMonth: boolean }>`
       : props.$isSunday
       ? "#74A580"
       : grayScale[400]};
+  height: 16px;
 `;
 
 type Props = {

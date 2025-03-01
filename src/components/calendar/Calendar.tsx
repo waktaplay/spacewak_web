@@ -7,6 +7,8 @@ import CalendarHeader from "./CalendarHeader";
 import { grayScale } from "@/styles/colors";
 import DayRow from "./DayRow";
 import Drawer from "./drawer/Drawer";
+import { TYPOGRAPHY } from "@/styles/typography";
+import Image from "next/image";
 
 enum FadeIn {
   Left = "left",
@@ -27,13 +29,33 @@ const Header = styled.div`
   width: 100%;
   height: 64px;
   flex-shrink: 0;
-  padding: 8px;
+  padding: 8px 20px;
   border-bottom: 1px solid ${grayScale[600]};
 
   & p {
     margin: 0;
-    font-size: 24px;
     color: ${grayScale[50]};
+    ${TYPOGRAPHY.subHeading1}
+    font-weight: 500 !important;
+    vertical-align: middle;
+    height: 24px;
+  }
+`;
+
+const CloseBtn = styled.button`
+  margin: 0 0 0 auto;
+  padding: 2px;
+  width: 24px;
+  height: 24px;
+  background: transparent;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  transition: 0.1s ease-in-out;
+  cursor: pointer;
+
+  &:active {
+    background: ${grayScale[800]};
   }
 `;
 
@@ -101,6 +123,14 @@ export default function Calendar() {
     <Container>
       <Header>
         <p>캘린더</p>
+        <CloseBtn type="button">
+          <Image
+            alt="close"
+            src="/static/images/icon/ic_close.svg"
+            width={20}
+            height={20}
+          />
+        </CloseBtn>
       </Header>
       <ContentFlex>
         <Drawer />
